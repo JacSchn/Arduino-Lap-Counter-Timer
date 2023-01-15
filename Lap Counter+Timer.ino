@@ -70,7 +70,7 @@ void loop() {
     }
   }
 
-  if (light < 100) {
+  if (light < 100) {                    //edit value to calibrate for your light level
     if (lapSet == 0 && started == 1) {
       lapNum++;
       lapSet++;
@@ -86,10 +86,12 @@ void loop() {
       Serial.print("\n");
     }
   }
-  if (light > 300) {
+  if (light > 300) {                //edit value to calibrate for your light level
     lapSet = 0;
   }
 
+  //You can uncomment these lines in order to see what your light levels are to help with calibration
+    
   //Serial.print(light);
   //Serial.print("\n");
 }
